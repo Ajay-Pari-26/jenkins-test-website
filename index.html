@@ -2,11 +2,36 @@
 <html>
 <head>
     <title>Signup Page</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        /* Simple fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+
+        /* Pulse animation for the submit button */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
 </head>
 <body>
-  <h1>This is a website ci/cd used by jenkins</h1>
 
-<div style="text-align: center; margin-top: 50px;">
+<div class="fade-in" style="text-align: center; margin-top: 50px;">
     <h1 style="color: navy;">Signup Form</h1>
     
     <form action="/submit-your-form" method="post">
@@ -26,7 +51,7 @@
         </div>
 
         <div style="margin-bottom: 20px;">
-            <input type="submit" value="Signup" style="padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            <input type="submit" value="Signup" class="pulse" style="padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">
         </div>
     </form>
 </div>
